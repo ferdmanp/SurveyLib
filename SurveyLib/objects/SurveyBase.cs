@@ -40,9 +40,8 @@ namespace SurveyLib.objects
 		#region --Props--
 		
 		public String Title { get; set; }
-        public IList<QuestionBase> Questions;
-		
-		#endregion
+
+        #endregion
 		
 		#region --Vars--
 		

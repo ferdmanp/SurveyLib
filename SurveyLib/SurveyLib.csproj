@@ -49,6 +49,8 @@
     <Compile Include="objects\AnswerBase.cs" />
     <Compile Include="objects\QuestionBase.cs" />
     <Compile Include="objects\SurveyBase.cs" />
+    <Compile Include="objects\SurveyResult.cs" />
+    <Compile Include="objects\SurveyUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

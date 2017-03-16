@@ -16,6 +16,7 @@ namespace SurveyLib.interfaces
 	internal interface ICRUDable
 	{
 		int Save();
+
 		
 		int Remove();		
 				

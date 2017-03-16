@@ -15,11 +15,27 @@ namespace SurveyLib.objects
 	/// </summary>
 	public abstract class AnswerBase:interfaces.ICRUDable
 	{
-		public AnswerBase()
-		{
-		}
-		
-		public bool IsCorrect {get;set;}
+        #region --Constructor--
+
+        public AnswerBase()
+        {
+
+        }
+
+        public AnswerBase(int id, string text, bool isCorrect = false)
+        {
+            this.Id = id;
+            if (String.IsNullOrWhiteSpace(text))
+                throw new ArgumentException("text show not be empty!");
+            this.IsCorrect = isCorrect;
+        }
+
+        #endregion
+
+
+
+
+        public bool IsCorrect {get;set;}
 		
 		public int Id { get; set; }
 		
@@ -27,12 +43,12 @@ namespace SurveyLib.objects
 
 		#region ICRUDable implementation
 
-		public int Save()
+		public virtual int Save()
 		{
 			throw new NotImplementedException();
 		}
 
-		public int Remove()
+		public virtual int Remove()
 		{
 			throw new NotImplementedException();
 		}
