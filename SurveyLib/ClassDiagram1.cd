@@ -3,7 +3,7 @@
   <Class Name="SurveyLib.objects.SurveyBase">
     <Position X="1.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAQAFAAAAASBAAAAARAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAQAFAAAAASBAAAAARAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>objects\SurveyBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -11,7 +11,7 @@
   <Class Name="SurveyLib.objects.QuestionBase">
     <Position X="3.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAIAAAAAAAAAAAAAABAAAAABAAAAAAAAACAAAAAA=</HashCode>
+      <HashCode>EBACAIAAAAAAAAAAABAABAAAAEBQAAAAAAAACAAAAAA=</HashCode>
       <FileName>objects\QuestionBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -23,6 +23,21 @@
       <FileName>objects\AnswerBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SurveyLib.objects.SurveyResult">
+    <Position X="7" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAEBAAAAAAAAAAAAgAAAAAAAQA=</HashCode>
+      <FileName>objects\SurveyResult.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SurveyLib.objects.SurveyUser">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAACAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>objects\SurveyUser.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="SurveyLib.interfaces.ICRUDable">
     <Position X="1.5" Y="0.5" Width="1.5" />
