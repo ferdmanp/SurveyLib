@@ -15,6 +15,9 @@ using System.Linq;
 
 namespace SurveyLib.objects
 {
+
+    
+
 	/// <summary>
 	/// Description of Survey.
 	/// </summary>
@@ -98,9 +101,33 @@ namespace SurveyLib.objects
 
 		public virtual int Remove(){
 			throw new NotImplementedException();
-		}		
-		
+		}
 
-		#endregion
-	}
+
+        #endregion
+
+        public override string ToString()
+        {
+            return Title;
+        }
+
+        public string GetPrintable()
+        {
+            string message=$"=========={Title}==========="
+                           +Environment.NewLine 
+                ;
+
+            foreach (var question in questions)
+            {
+                message += $"   {question.Id}) {question.Text}"
+                            +Environment.NewLine;
+                foreach (var answer in question.GetAnswers())
+                {
+                    message += $"        {answer.Id} {answer.Text} {Environment.NewLine}";                    
+                }
+            }
+
+            return message;
+        }
+    }
 }

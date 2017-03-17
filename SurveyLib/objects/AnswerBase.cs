@@ -13,7 +13,7 @@ namespace SurveyLib.objects
 	/// <summary>
 	/// Description of Answer.
 	/// </summary>
-	public abstract class AnswerBase:interfaces.ICRUDable
+	public class AnswerBase:interfaces.ICRUDable
 	{
         #region --Constructor--
 
@@ -27,6 +27,7 @@ namespace SurveyLib.objects
             this.Id = id;
             if (String.IsNullOrWhiteSpace(text))
                 throw new ArgumentException("text show not be empty!");
+            this.Text = text;
             this.IsCorrect = isCorrect;
         }
 

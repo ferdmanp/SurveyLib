@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SurveyLib.objects
 {
-    class SurveyUser
+    public class SurveyUser
     {
         public string Username { get; set; }
 
