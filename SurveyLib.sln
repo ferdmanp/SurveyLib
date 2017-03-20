@@ -1,10 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-# SharpDevelop 5.0
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyLib", "SurveyLib\SurveyLib.csproj", "{9DBD3CBA-62E9-4499-BCF1-99766CC98403}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSurveyTest", "ConsoleSurveyTest\ConsoleSurveyTest.csproj", "{3958663E-8D77-4F34-804E-FBA6F9DC85E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyLib2", "SurveyLib2\SurveyLib2.csproj", "{5903C6C1-A5BE-4C05-AF19-2C6B29BCBA30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,5 +23,12 @@ Global
 		{3958663E-8D77-4F34-804E-FBA6F9DC85E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3958663E-8D77-4F34-804E-FBA6F9DC85E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3958663E-8D77-4F34-804E-FBA6F9DC85E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5903C6C1-A5BE-4C05-AF19-2C6B29BCBA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5903C6C1-A5BE-4C05-AF19-2C6B29BCBA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5903C6C1-A5BE-4C05-AF19-2C6B29BCBA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5903C6C1-A5BE-4C05-AF19-2C6B29BCBA30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
