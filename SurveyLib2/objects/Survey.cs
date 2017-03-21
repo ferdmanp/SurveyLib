@@ -15,6 +15,8 @@ namespace SurveyLib2.objects
 
         #region --PROPS--
         public SurveyObjectCollection<Question> Questions { get; set;}
+
+       
         #endregion
 
         #region --CTOR--
@@ -36,8 +38,24 @@ namespace SurveyLib2.objects
             if (item != null)
             {
                 Questions.Add((Question)item);
+                item.Parent = this;
             }
+            else
+                throw new Exception($"Item with type {item.GetType().Name} cannot be child of type Survey");
+            
         }
+
+        public void AddChild(string title)
+        {
+            var id = Questions.GetLastId()+1;
+            Question question = new Question(title, id);
+            this.AddChild(question);
+        }
+
+        //public SurveyObjectCollection<SurveyObjectBase> GetChildren()
+        //{
+        //    return (SurveyObjectCollection<SurveyObjectBase>)Questions;
+        //}
         #endregion
 
 

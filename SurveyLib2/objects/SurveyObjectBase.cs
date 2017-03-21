@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SurveyLib2.interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace SurveyLib2.objects
 
         public virtual int Id { get; set; }
 
-        public virtual SurveyObjectBase Parent { get; set; }        
+        public virtual IParentable Parent { get; set; }        
 
         public override string ToString()
         {

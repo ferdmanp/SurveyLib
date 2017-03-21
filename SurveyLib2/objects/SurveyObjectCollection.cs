@@ -45,6 +45,8 @@ namespace SurveyLib2.objects
             objects.Add(item);
         }
 
+        
+
         public void Delete(int id)
         {
             int pos = objects.IndexOf(this[id]);

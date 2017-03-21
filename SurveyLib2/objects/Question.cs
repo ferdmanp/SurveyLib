@@ -29,8 +29,18 @@ namespace SurveyLib2.objects
             if (item != null)
             {
                 Answers.Add((Answer)item);
+                item.Parent = this;
             }
-        } 
+            else
+                throw new Exception($"Item with type {item.GetType().Name} cannot be child of type Question");
+        }
+
+        public void AddChild(string title)
+        {
+            var id = Answers.GetLastId() + 1;
+            Answer answer = new Answer(title, id);
+            this.AddChild(answer);
+        }
         #endregion
     }
 }

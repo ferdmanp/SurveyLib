@@ -15,20 +15,14 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SurveyLib2.objects.Survey" Collapsed="true">
+  <Class Name="SurveyLib2.objects.SurveyCollection" Collapsed="true">
     <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
-      <FileName>objects\Survey.cs</FileName>
+      <HashCode>AAIAAAAAACAAEACAgAAAAAAAAAEAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>objects\SurveyAdmin.cs</FileName>
+      <NewMemberFileName>objects\Survey.cs</NewMemberFileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="SurveyLib2.objects.SurveyAdmin" Collapsed="true">
-    <Position X="7.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>objects\SurveyAdmin.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="SurveyLib2.objects.SurveyObjectBase" Collapsed="true">
     <Position X="2.75" Y="0.5" Width="1.5" />
@@ -51,8 +45,8 @@
       <FileName>objects\SurveyUser.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="SurveyLib2.interfaces.IParentable">
-    <Position X="9.25" Y="1.25" Width="1.5" />
+  <Interface Name="SurveyLib2.interfaces.IParentable" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>interfaces\IParentable.cs</FileName>
