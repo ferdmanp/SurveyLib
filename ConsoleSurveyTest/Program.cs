@@ -7,7 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-using SurveyLib.classes;
+using SurveyLib2.objects;
 
 namespace ConsoleSurveyTest
 {
@@ -17,21 +17,14 @@ namespace ConsoleSurveyTest
 		{
 			Console.WriteLine("Hello World!");
 
-            // TODO: Implement Functionality Here
+            SurveyCollection collection = new SurveyCollection(
+                    new SurveyUser("admin", "0000", UserRole.User | UserRole.User)
+                );
 
-            SurveyBuilder builder = new SurveyBuilder();
-            builder.CreateSurvey("Test", new SurveyLib.objects.SurveyUser());
-            var question=builder.AddQuestion("Question 1");
-            builder.AddAnswer(question, "Answer1", true);
-            builder.AddAnswer(question, "Answer2", false);
-            builder.AddAnswer(question, "Answer3", false);
-            builder.AddAnswer(question, "Answer4", false);
-            question = builder.AddQuestion("Question 2");
-            builder.AddAnswer(question, "Answer 11", false);
-            builder.AddAnswer(question, "Answer 12", false);
-            builder.AddAnswer(question, "Answer 13", true);
-            builder.AddAnswer(question, "Answer 14", false);
-            builder.PrintResult(Console.WriteLine);
+            collection.AddChild("Survey 1");
+
+                
+
 
             Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);

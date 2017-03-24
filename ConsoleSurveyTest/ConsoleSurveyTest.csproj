@@ -55,9 +55,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SurveyLib\SurveyLib.csproj">
-      <Project>{9dbd3cba-62e9-4499-bcf1-99766cc98403}</Project>
-      <Name>SurveyLib</Name>
+    <ProjectReference Include="..\SurveyLib2\SurveyLib2.csproj">
+      <Project>{5903c6c1-a5be-4c05-af19-2c6b29bcba30}</Project>
+      <Name>SurveyLib2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

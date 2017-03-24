@@ -19,8 +19,7 @@
     <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAACAAEACAgAAAAAAAAAEAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>objects\SurveyAdmin.cs</FileName>
-      <NewMemberFileName>objects\Survey.cs</NewMemberFileName>
+      <FileName>objects\SurveyCollection.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
