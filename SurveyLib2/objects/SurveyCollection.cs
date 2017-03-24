@@ -28,6 +28,7 @@ namespace SurveyLib2.objects
             currentUser = user;
             if (user.Role.HasFlag(UserRole.Admin))
                 canAdd = true;
+            Surveys = new SurveyObjectCollection<Survey>();
         }
         #endregion
 
@@ -87,15 +88,18 @@ namespace SurveyLib2.objects
 
         public void AddChild(SurveyObjectBase item)
         {
-            Surveys.Add((Survey)item);
-            item.Parent = this;
+                Surveys.Add((Survey)item);
+                item.Parent = this;
+            ((Survey)item).UserCreator = currentUser;     
+            
         }
 
-        public void AddChild(string title)
+        public SurveyObjectBase AddChild(string title)
         {
             var id = Surveys.GetLastId() + 1;
-            Survey survey = new Survey(title, id);
+            Survey survey = new Survey(title, id,currentUser);
             this.AddChild(survey);
+            return survey;
         }
 
         void CheckIfCanAdd()

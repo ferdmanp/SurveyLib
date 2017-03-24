@@ -22,6 +22,11 @@ namespace SurveyLib2.objects
             Answers = new SurveyObjectCollection<Answer>();
         }
 
+        public Question(int id):this("No title",id)
+        {
+
+        }
+
         #region --IParentable--
         public void AddChild(SurveyObjectBase item)
         {
@@ -35,11 +40,12 @@ namespace SurveyLib2.objects
                 throw new Exception($"Item with type {item.GetType().Name} cannot be child of type Question");
         }
 
-        public void AddChild(string title)
+        public SurveyObjectBase AddChild(string title)
         {
             var id = Answers.GetLastId() + 1;
             Answer answer = new Answer(title, id);
             this.AddChild(answer);
+            return answer;
         }
         #endregion
     }

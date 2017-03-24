@@ -11,7 +11,8 @@ namespace SurveyLib2.interfaces
     {
         void AddChild(objects.SurveyObjectBase item);
 
-        void AddChild(string title);
+        //void AddChild(string title);
+        objects.SurveyObjectBase AddChild(string title);
 
         //SurveyObjectCollection<SurveyObjectBase> GetChildren() ;        
     }

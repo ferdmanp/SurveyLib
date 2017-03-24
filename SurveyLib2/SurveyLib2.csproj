@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Globals.cs" />
     <Compile Include="interfaces\IParentable.cs" />
     <Compile Include="objects\Answer.cs" />
     <Compile Include="objects\Question.cs" />

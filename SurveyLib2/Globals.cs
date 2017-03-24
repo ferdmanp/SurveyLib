@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SurveyLib2
 {
-    public class Class1
+
+    public delegate void PrintMethod(string message);
+
+    public class Globals
     {
     }
 }

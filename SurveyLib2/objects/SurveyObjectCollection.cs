@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace SurveyLib2.objects
 {
-    public class SurveyObjectCollection<T> where T:SurveyObjectBase
+    public class SurveyObjectCollection<T> 
+        :IEnumerable<T> 
+        where T:SurveyObjectBase
     {
         #region --VARS--
 
@@ -22,6 +25,15 @@ namespace SurveyLib2.objects
                 return objects
                     .Where(x => x.Id == id)
                     .FirstOrDefault();
+            }
+            set
+            {
+                T obj = this[id];
+                if (obj == null)
+                {
+                    obj = (T)Activator.CreateInstance(typeof(T), new int[] { id} );                    
+                }
+                obj = value;
             }            
         }
 
@@ -68,8 +80,23 @@ namespace SurveyLib2.objects
 
         public int GetLastId()
         {
-            return objects
-                   .Max(x => x.Id);            
+            int maxid = 0;
+            if(objects.Count>0)
+            maxid=objects
+                   .Max(x => x.Id);
+
+            return maxid;
+                   
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return objects.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return objects.GetEnumerator();
         }
         #endregion
 

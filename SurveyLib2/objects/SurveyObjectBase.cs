@@ -16,6 +16,8 @@ namespace SurveyLib2.objects
             this.Id = id;
         }
 
+        private SurveyObjectBase() { }
+
         
         public virtual string Title { get; set; }
 
