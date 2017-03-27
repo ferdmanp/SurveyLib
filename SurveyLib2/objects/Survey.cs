@@ -72,7 +72,7 @@ namespace SurveyLib2.objects
                 printMethod($"   ({question.Id})...{question.Title}");
                 foreach (var answer in question.Answers)
                 {
-                    printMethod($"      ({answer.Id})...{answer.Title}");
+                    printMethod($"      ({answer.Id})...{answer.Title}...{answer.IsCorrect.ToString()}....{answer.AnswerScore}");
                 }
             }
         }

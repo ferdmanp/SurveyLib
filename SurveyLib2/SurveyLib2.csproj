@@ -47,8 +47,10 @@
     <Compile Include="objects\Question.cs" />
     <Compile Include="objects\Survey.cs" />
     <Compile Include="objects\SurveyCollection.cs" />
+    <Compile Include="objects\SurveyEngine.cs" />
     <Compile Include="objects\SurveyObjectBase.cs" />
     <Compile Include="objects\SurveyObjectCollection.cs" />
+    <Compile Include="objects\SurveyResult.cs" />
     <Compile Include="objects\SurveyUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

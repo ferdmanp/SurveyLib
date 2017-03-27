@@ -15,6 +15,15 @@ namespace SurveyLib2.objects
 
         #region --Props--
         public SurveyObjectCollection<Answer> Answers { get; set; }
+        public List<Answer> CorrectAnswers
+        {
+            get
+            {
+                return Answers
+                    .Where(x => x.IsCorrect)
+                    .ToList();
+            }            
+        }
         #endregion
 
 

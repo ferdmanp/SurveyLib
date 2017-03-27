@@ -18,7 +18,7 @@ namespace ConsoleSurveyTest
 			Console.WriteLine("Hello World!");
 
             SurveyCollection collection = new SurveyCollection(
-                    new SurveyUser("admin", "0000", UserRole.User | UserRole.User)
+                    new SurveyUser("admin", "0000", UserRole.User | UserRole.Admin)
                 );
 
             var survey = (Survey)collection.AddChild("Survey 1");
@@ -33,6 +33,8 @@ namespace ConsoleSurveyTest
 
             //survey.PrintSurveyData(Console.WriteLine);
 
+            Random rndCorrect = new Random();
+            Random rndScrore = new Random();
 
             var survey2 = (Survey)collection.AddChild("Survey2");
             //survey2.Questions.Add(1, "Question 2.1");
@@ -47,8 +49,14 @@ namespace ConsoleSurveyTest
                 survey2.Questions.Add(i, title);
                 for (int j = 1; j <= 5; j++)
                 {
-                    survey2.Questions[i].Answers.Add(j, $"Answer 2.{i}.{j}");
+                    survey2.Questions[i].Answers.Add(j, $"Answer 2.{i}.{j}");                    
                 }
+
+                int randNum = rndCorrect.Next(1, 5);
+                int range = 10;
+                survey2.Questions[i].Answers[randNum].IsCorrect = true;                
+                
+                survey2.Questions[i].Answers[randNum].AnswerScore = rndScrore.NextDouble() * range;
             }
 
             //survey2.PrintSurveyData(Console.WriteLine);
