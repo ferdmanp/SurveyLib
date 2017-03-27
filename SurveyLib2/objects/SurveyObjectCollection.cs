@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace SurveyLib2.objects
 {
-    public class SurveyObjectCollection<T> 
-        :IEnumerable<T> 
-        where T:SurveyObjectBase
+    public class SurveyObjectCollection<T>
+        : IEnumerable<T>
+        where T : SurveyObjectBase
     {
         #region --VARS--
 
@@ -31,11 +31,13 @@ namespace SurveyLib2.objects
                 T obj = this[id];
                 if (obj == null)
                 {
-                    obj = (T)Activator.CreateInstance(typeof(T), new int[] { id} );                    
+                    obj = (T)Activator.CreateInstance(typeof(T), new int[] { id });
                 }
                 obj = value;
-            }            
+            }
         }
+
+
 
         #endregion
 
@@ -57,6 +59,18 @@ namespace SurveyLib2.objects
             objects.Add(item);
         }
 
+        public void Add(string title)
+        {
+            int id = GetLastId() + 1;
+            T obj = (T)Activator.CreateInstance(typeof(T), new object[] {  title,id });
+            this.Add(obj);
+        }
+
+        public void Add(int id, string title)
+        {
+            T obj = (T)Activator.CreateInstance(typeof(T), new object[] { title, id });
+            Add(obj);
+        }
         
 
         public void Delete(int id)

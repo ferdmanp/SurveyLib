@@ -21,8 +21,8 @@ namespace ConsoleSurveyTest
                     new SurveyUser("admin", "0000", UserRole.User | UserRole.User)
                 );
 
-            var survey= (Survey)collection.AddChild("Survey 1");
-            var question= (Question)survey.AddChild("Question 1");
+            var survey = (Survey)collection.AddChild("Survey 1");
+            var question = (Question)survey.AddChild("Question 1");
             question.AddChild("Asnwer 1");
             question.AddChild("Answer 2");
             ((Answer)question.AddChild("Answer 3")).IsCorrect = true;
@@ -31,11 +31,32 @@ namespace ConsoleSurveyTest
             question.AddChild("Answer 22");
             ((Answer)question.AddChild("Answer 23")).IsCorrect = true;
 
-            survey.PrintSurveyData(Console.WriteLine);
+            //survey.PrintSurveyData(Console.WriteLine);
 
 
             var survey2 = (Survey)collection.AddChild("Survey2");
-            //survey2.Questions[1]=new Question()
+            //survey2.Questions.Add(1, "Question 2.1");
+            //survey2.Questions.Add(2, "Question 2.2");
+            //survey2.Questions.Add(3, "Question 2.3");
+            //survey2.Questions.Add(4, "Question 2.4");
+            //survey2.Questions.Add(5, "Question 2.5");
+            //survey2.Questions[1].Answers.Add(1,"Ans")
+            for (int i = 1; i <= 10; i++)
+            {
+                string title = $"Question 2.{i}";
+                survey2.Questions.Add(i, title);
+                for (int j = 1; j <= 5; j++)
+                {
+                    survey2.Questions[i].Answers.Add(j, $"Answer 2.{i}.{j}");
+                }
+            }
+
+            //survey2.PrintSurveyData(Console.WriteLine);
+            foreach (Survey item in collection.Surveys)
+            {
+                item.PrintSurveyData(Console.WriteLine);
+            }
+
 
 
             Console.Write("Press any key to continue . . . ");
