@@ -24,6 +24,12 @@ namespace SurveyLib2.objects
                     .ToList();
             }            
         }
+
+        public bool CanHaveMultipleAnswers()
+        {
+            return CorrectAnswers.Count > 1;
+        }
+        
         #endregion
 
 

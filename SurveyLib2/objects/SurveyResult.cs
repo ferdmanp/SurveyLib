@@ -5,27 +5,39 @@ using System.Text;
 
 namespace SurveyLib2.objects
 {
+    [Serializable]
     public class SurveyResult
     {
         #region --VARS--
-        Survey survey;
+        //Survey survey;
+        private Survey survey;
         Tuple<Question, List<Answer>, List<Answer>> answerRow;
         List<Tuple<Question, List<Answer>, List<Answer>>> answersSet;
         double surveyTotalScore;
-        public Question lastQuestion;
+        SurveyUser user;
         #endregion
 
         #region --PROPS--
+        
+
+        public Survey Survey
+        {
+            get { return survey; }
+            set { survey = value; }
+        }
+
+        public Question LastAnsweredQuestion { get; set; }
 
         #endregion
 
         #region --CTOR--
-        public SurveyResult(Survey survey)
+        public SurveyResult(Survey survey, SurveyUser user)
         {
             this.survey = survey;
+            this.user = user;
             answersSet = new List<Tuple<Question, List<Answer>, List<Answer>>>();
             surveyTotalScore = 0.0;
-            lastQuestion = survey.Questions[1];
+            LastAnsweredQuestion = survey.Questions[1];
         }
 
         private SurveyResult()
@@ -50,7 +62,7 @@ namespace SurveyLib2.objects
                             select new { score = ans.AnswerScore }).Sum(x => x.score);
                          ;
             surveyTotalScore += answeredScore;
-            lastQuestion = question;
+            LastAnsweredQuestion = question;
         }
 
         public void AddAnswer(Question question, Answer givenAnswer)
