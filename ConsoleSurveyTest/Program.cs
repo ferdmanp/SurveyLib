@@ -8,6 +8,8 @@
  */
 using System;
 using SurveyLib2.objects;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleSurveyTest
 {
@@ -17,8 +19,10 @@ namespace ConsoleSurveyTest
 		{
 			Console.WriteLine("Hello World!");
 
+            SurveyUser user = new SurveyUser("admin", "0000", UserRole.User | UserRole.Admin);
+
             SurveyCollection collection = new SurveyCollection(
-                    new SurveyUser("admin", "0000", UserRole.User | UserRole.Admin)
+                    user
                 );
 
             var survey = (Survey)collection.AddChild("Survey 1");
@@ -65,10 +69,59 @@ namespace ConsoleSurveyTest
                 item.PrintSurveyData(Console.WriteLine);
             }
 
+            RunSurvey(collection, survey2.Id ,user);
 
 
             Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
-	}
+
+        private static void RunSurvey(SurveyCollection collection, int surveyId, SurveyUser user)
+        {
+
+            
+            SurveyEngine engine = new SurveyEngine(collection);
+            engine.StartSurvey(surveyId, user);
+            Question currentQuestion = engine.CurrentQuestion;
+            
+            do
+            {
+                Console.WriteLine(currentQuestion.Title);
+                foreach (var answer in currentQuestion.Answers)
+                {
+                    Console.WriteLine($"___{answer.Id}) {answer.Title}");
+                }
+
+                Console.WriteLine($"Enter your selection");
+                string[] result = Console.ReadLine().Split(',');
+                List<Answer> selection = new List<Answer>();
+                for (int i = 0; i < result.Length; i++)
+                {
+                    int id=Int32.Parse(result[i]);
+                    if (currentQuestion.Answers.Max(x => x.Id) >= id)
+                    {
+                        selection.Add(currentQuestion.Answers[id]);
+                    }
+                }
+
+                engine.Answer(selection);
+                
+                currentQuestion = engine.NextQuestion();
+            } while (currentQuestion!=null);
+
+            Console.WriteLine($"Your score is {engine.Result.Score} from {engine.Result.MaxScore}");
+        }
+    }
+
+    public static class Extensions
+    {
+        public static bool IsEqual(this List<int> src, List<int> comp)
+        {
+            bool result = false;
+
+            result = (src.Count == comp.Count && !src.Except(comp).Any());
+                            
+            return result;
+        }
+    }
 }

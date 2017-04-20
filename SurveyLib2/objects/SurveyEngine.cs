@@ -12,10 +12,21 @@ namespace SurveyLib2.objects
         SurveyCollection surveyCollection;
         SurveyResult surveyResult;
         Question currentQuestion;
-        int maxQuestionId;        
+        int maxQuestionId;
         #endregion
 
-        #region --PROPS--
+        #region --PROPS--        
+
+        public Question CurrentQuestion
+        {
+            get { return currentQuestion; }
+            set { currentQuestion = value; }
+        }
+
+        public SurveyResult Result
+        {
+            get { return surveyResult; }
+        }
 
         #endregion
 

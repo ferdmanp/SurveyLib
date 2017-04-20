@@ -25,6 +25,16 @@ namespace SurveyLib2.objects
             }            
         }
 
+        public List<int> CorrectAnswersIds
+        {
+            get
+            {
+                return (from ans in Answers
+                        where ans.IsCorrect
+                        select ans.Id).ToList();
+            }
+        }
+
         public bool CanHaveMultipleAnswers()
         {
             return CorrectAnswers.Count > 1;

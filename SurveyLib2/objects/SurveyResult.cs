@@ -14,6 +14,7 @@ namespace SurveyLib2.objects
         Tuple<Question, List<Answer>, List<Answer>> answerRow;
         List<Tuple<Question, List<Answer>, List<Answer>>> answersSet;
         double surveyTotalScore;
+        double surveyMaxScore;
         SurveyUser user;
         #endregion
 
@@ -27,6 +28,27 @@ namespace SurveyLib2.objects
         }
 
         public Question LastAnsweredQuestion { get; set; }
+
+        public double Score
+        {
+            get { return surveyTotalScore; }
+        }
+
+        public double MaxScore
+        {
+            get {
+                double score = 0;
+                foreach (var question in survey.Questions)
+                {
+                    foreach (var ans in question.CorrectAnswers)
+                    {
+                        score += ans.AnswerScore;
+                    }
+                }
+                return score;
+                                     
+            }
+        }
 
         #endregion
 
@@ -49,6 +71,7 @@ namespace SurveyLib2.objects
         #region --METHODS--
         public void AddAnswer(Question question, List<Answer> givenAnswer)
         {
+            
             answerRow = new Tuple<Question, List<Answer>, List<Answer>>(
                     question,
                     givenAnswer,
