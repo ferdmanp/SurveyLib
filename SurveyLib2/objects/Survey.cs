@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SurveyLib2.interfaces;
 
 namespace SurveyLib2.objects
@@ -65,7 +61,7 @@ namespace SurveyLib2.objects
 
             printMethod($"**************({this.Id})*{this.Title}*************");
             printMethod($"*             Author: {this.UserCreator.Name}     *");
-            printMethod($"=================================================");
+            printMethod($"===================================================");
 
             foreach (var question in Questions)
             {

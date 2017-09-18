@@ -1,59 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="SurveyLib2.objects.Answer" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>objects\Answer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SurveyLib2.objects.Question" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
-      <FileName>objects\Question.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="SurveyLib2.objects.SurveyCollection" Collapsed="true">
-    <Position X="5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAIAAAAAACAAEACAgAAAAAAAAAEAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>objects\SurveyCollection.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="SurveyLib2.objects.SurveyObjectBase" Collapsed="true">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+  <Class Name="SurveyLib2.objects.SurveyObjectBase">
+    <Position X="3.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAEAEAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>objects\SurveyObjectBase.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SurveyLib2.objects.SurveyObjectCollection&lt;T&gt;" Collapsed="true">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+  <Class Name="SurveyLib2.objects.SurveyObjectCollection&lt;T&gt;">
+    <Position X="0.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAABAACAAAAAAAAQEAAAAEAAAAAABAAEA=</HashCode>
       <FileName>objects\SurveyObjectCollection.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="SurveyLib2.objects.SurveyResult">
+    <Position X="4.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAAAAAQAgAAgAAAAABAAAAAAQAIAAAACAAAAAgQA=</HashCode>
+      <FileName>objects\SurveyResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="SurveyLib2.objects.SurveyUser" Collapsed="true">
-    <Position X="7.5" Y="1.5" Width="1.5" />
+    <Position X="6.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>objects\SurveyUser.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="SurveyLib2.interfaces.IParentable" Collapsed="true">
-    <Position X="11" Y="0.5" Width="1.5" />
+  <Class Name="SurveyLib2.objects.SurveyEngine" Collapsed="true">
+    <Position X="6.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAYAAAAAAAAAAAAAAQCAAAAAAAAAAAIIwAAAAQ=</HashCode>
+      <FileName>objects\SurveyEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurveyLib2.objects.SurveyCollection">
+    <Position X="8" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAEACAgAAAAAAAAAEAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>objects\SurveyCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SurveyLib2.objects.Survey">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEAABAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>objects\Survey.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SurveyLib2.objects.Question">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAIAAAAAAI=</HashCode>
+      <FileName>objects\Question.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SurveyLib2.objects.Answer">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>objects\Answer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SurveyLib2.interfaces.IParentable">
+    <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>interfaces\IParentable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="SurveyLib2.objects.UserRole" Collapsed="true">
-    <Position X="7.5" Y="2.75" Width="1.5" />
+    <Position X="6.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>objects\SurveyUser.cs</FileName>

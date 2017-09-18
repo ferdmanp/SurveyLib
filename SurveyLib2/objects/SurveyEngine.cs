@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SurveyLib2.objects
 {
-    
+
     public class SurveyEngine
     {
         #region --VARS--
